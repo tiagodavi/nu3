@@ -64,7 +64,7 @@ class Controller_Home extends Controller_Rest
 	private function open_data_source($term)
 	{	
 		return json_decode ( file_get_contents (
-			"http://api.openweathermap.org/data/2.5/forecast?q={$term}&mode=json&appid=".static::ID
+			"http://api.openweathermap.org/data/2.5/forecast?q={$term}&mode=json&units=metric&appid=".static::ID
 		));
 	}
 	
